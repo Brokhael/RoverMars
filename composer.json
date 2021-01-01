@@ -10,8 +10,8 @@
     },
     "autoload": {
         "psr-4": {
-            "MarsRover\\": "src/"
-
+            "MarsRover\\": "src/",
+            "Test\\": "tests/"
         }
     }
 }

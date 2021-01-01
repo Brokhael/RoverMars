@@ -44,10 +44,6 @@ class MovementUtil {
             if ('F' === $next) {
                 $nextPosition = $this->getNextPosition($position, $actualOrientation);
             }
-            if ($nextPosition[0] > $this->rover->getGrid()[0] || $nextPosition[0] > $this->rover->getGrid()[0]) {
-                $planetaExplorado = true;
-                break;
-            }
             if ($obstacle === $nextPosition) {
                 $obstaculoEncontrado = true;
                 $return = 'Hay un obstáculo en la posición ['.$nextPosition[0].', '.$nextPosition[1].'], permanezco en la última posición segura ['.$position[0].', '.$position[1].']';
@@ -56,12 +52,8 @@ class MovementUtil {
                 $position = $nextPosition;
             }
         }
-        if (!$obstaculoEncontrado || $planetaExplorado) {
-            if (!$obstaculoEncontrado) {
-                $return = '¡He conseguido recorrer el camino indicado sin obstáculos!';
-            } else {
-                $return = 'He recorrido el planeta entero sin encontrar obstáculos.';
-            }
+        if (!$obstaculoEncontrado) {
+            $return = '¡He conseguido recorrer el camino indicado sin obstáculos!';
         }
 
         return $return;
