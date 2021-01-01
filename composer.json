@@ -1,0 +1,17 @@
+{
+    "authors": [
+        {
+            "name": "Pavlo Bodnar",
+            "email": "pavlobod91@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "MarsRover\\": "src/"
+
+        }
+    }
+}
