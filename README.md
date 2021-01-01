@@ -25,3 +25,5 @@ it is facing.
 
 #### Resolucón
 He basado mi solución asumiendo que el `Rover` Avanza cuando se le da la instrucción `F` y que cuando se le da una instrucción `R` o `L` Rota sobre si mismo para reorientarse. Y que el "moverse al último punto posible es la última posición en la que está antes del obstáculo"
+
+Para poder ejecutar el código es preciso instalar PHPUNIT tal y como está puesto en el fichero `composer.json` y ejecutándolo se podrá ver los tests.
